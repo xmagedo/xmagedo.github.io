@@ -1,37 +1,58 @@
 ## Machine learning model for penetration testing
 
-You can use the [editor on GitHub](https://github.com/xmagedo/xmagedo.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+In this blog I will be uncovering one how to perform one type of attack on machine learning models called black box in white box adversarial. I will explore two types of attackes 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. Black box adversarial attack 
+2. White box adversarial attack
 
-### Markdown
+### Black box attack
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Simply put, it alter inputs in machine learning models and results to misclassification. Attackers poison the model in order to change the learning 
+outcome, by adding malicious data in the model training phase. This method can be performed, for example, by sending and injecting carefully designed 
+samples when data collection is occurring during network operations, to train a network intrusion detection system model.
 
-```markdown
-Syntax highlighted code block
+The below image provides bright idea on adversarial attacks:
 
-# Header 1
-## Header 2
-### Header 3
+![image](https://user-images.githubusercontent.com/54819478/170130629-45aaf2ff-ce35-4dde-998b-e43b55873987.png)
 
-- Bulleted
-- List
+In this image, generaly you are only giving access the internal functions including things such as grading, you are only giving acces to the prediction 
+score. some prominent examples of machine learning models that are given to you as black box are google's models online and clarified in the real world. 
+This is the most likely scenario a pentration tester will encounter where create a test to get in some service to a machine learning model. 
+The goal of adversarial machine learning is to help harden and test for vulnerabilities of the model. 
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+### White box attack
 
-[Link](url) and ![Image](src)
-```
+In white box attack called F GSM which stands for fast gradient signed method, and in this attack and more generally in white box attacks the attacker have 
+access to the internal information of the model things such as the architecture gradients and so on. And this allows us to quickly craft and under sail 
+instance and interact the model . So whenever we have a neural network and an example you feed in this into the neural network and uses its 
+weights to perform some computations such as small applications additions maybe some non linearity using the pixel values of the input.
+So the overall error or the overall loss on the input is some RF metric computation involving the weights of the model and the variables which are the 
+pixel values. Usually what we do when we are training the neural network is look at this function's loss. Objective key cost is a function only of the 
+weights of the model that we think of the input pixels as being fixed which is correct because a single input is just that it's given an image and it
+doesn't change. We then compute the gradient of the loss with respect to the weights of the model in an algorithm called back propagation and then we 
+perform gradient descent using the grading. So we just go in a direction that will reduce the loss for us but in the adversarial setting we have the exact 
+opposite. So our loss which is a function of the model weights and the pixel values instead of having fixed pixel values now fixed model weights and 
+the pixel values are what variance. So now what we do is again compute the gradients. But now the gradients are in terms of the pixel values in terms of 
+the input. And again all we do is go along the gradient using gradient descent except we are going in the opposite direction because we are looking to 
+maximize loss to create larger and larger error as opposed to minimizing it. So that is the basic idea of fast gradient signed method. Find the gradient in 
+terms of the pixel values and then perform gradient descent.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
+The steps are as follows in order to perform any penetration attack on model:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xmagedo/xmagedo.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+1. Identify a proper adversary's goal
+2. Define the adversary's knowledge
+3. Formulate the corresponding optimization problem
+4. Resample the collected (training and test) data accordingly
+5. Evaluate the classifier's security on the resampled data
+6. Repeat the evaluation for different levels of adversary knowledge
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+
+
+Reference: https://researchain.net/archives/pdf/Explaining-And-Harnessing-Adversarial-Examples-2127777 
+
+Reference: Mastering Machine Learning for Penetration Testing Chiheb Chebbi
+
