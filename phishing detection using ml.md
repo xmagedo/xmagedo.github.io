@@ -9,15 +9,15 @@
 The first thing to do to tackle and analyse website is URL to find out whether it is a phishing or not. URL phshing domains have distinctive feature in which one  can tell. Below points can tell if it is phishing or not.
 
 
-### URL length 
+### 1. URL length 
 
-### Typosquatted . (google.com → goggle.com)
+### 2. Typosquatted . (google.com → goggle.com)
 
-### If it has a legitimate brand name or not (apple-icloud-login.com)
+### 3. If it has a legitimate brand name or not (apple-icloud-login.com)
 
-### Number of subdomains in URL
+### 4. Number of subdomains in URL
 
-### Top Level Domain one of the commonly used one?
+### 5. Top Level Domain one of the commonly used one?
 
 
 
@@ -53,22 +53,11 @@ The dataset consists of several thousand-feature vectors for phishing URLs. Ther
 we train and test a random forest classifier. The accuracy is pretty high, but depending on how balanced the dataset is, it might be necessary to consider an FP constraint. There are many ways to expand upon such a detector, such as by adding other features and growing the dataset.
 
 
-
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix
-
-clf = RandomForestClassifier()
-clf.fit(X_train, y_train)
-y_test_pred = clf.predict(X_test)
-print(accuracy_score(y_test, y_test_pred))
-print(confusion_matrix(y_test, y_test_pred))
+![image](https://user-images.githubusercontent.com/54819478/180000068-562b0fc7-3322-4d6c-b27d-05191e5cb884.png)
 
 
 The following output: 
-
-0.9820846905537459
-[[340   7]
- [  4 263]]
+![image](https://user-images.githubusercontent.com/54819478/180000212-96ddb51f-6213-4872-9be2-39b81b500de3.png)
 
 
 
