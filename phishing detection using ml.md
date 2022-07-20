@@ -57,6 +57,10 @@ we train and test a random forest classifier. The accuracy is pretty high, but d
 
 
 The following output: 
+
+
+
+
 ![image](https://user-images.githubusercontent.com/54819478/180000212-96ddb51f-6213-4872-9be2-39b81b500de3.png)
 
 
