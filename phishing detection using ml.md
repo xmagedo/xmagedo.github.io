@@ -25,7 +25,8 @@ The first thing to do to tackle and analyse website is URL to find out whether i
 
 Is classification algorithm which uses bagging and feature randomness when building each individual tree to try to create an uncorrelated forest of trees whose prediction by committee is more accurate than that of any individual tree. It is supervised machine learning Supervised Machine Learning Algorithm that is used widely in Classification and Regression problems. It builds decision trees on different samples and takes their majority vote for classification and average in case of regression. A below image will provide bright idea: 
 
- 
+ ![image](https://user-images.githubusercontent.com/54819478/180170219-6f210f10-a69d-4105-8678-b73125aa225f.png)
+
 
 # Phishing detection: 
 
