@@ -1,12 +1,16 @@
 # Phishing detection using ML
 
 
- According to recent Cybersecurity reports that the largest contributing factor to more than 16000 cyberattacks were mostly phishing scams which accounted with over 12000 incidents. Often bank customers are hit with phishing frauds emails and SMS and they end victims. A lot of papers out there have gone and used phishing detection using machine learning using random forest. There are different kinds of phishing detection. However, in this blog I will tackle URL phshing detection briefly. 
+According to recent Cybersecurity reports that the largest contributing factor to more than 16000 cyberattacks were mostly phishing scams which accounted with over 
+12000 incidents. Often bank customers are hit with phishing frauds emails and SMS and they end victims. A lot of papers out there have gone and used phishing detection 
+using machine learning using random forest. There are different kinds of phishing detection methods. However, in this blog I will tackle URL  phishing detection 
+briefly. 
 
 
 # URL-Based Features
 
-The first thing to do to tackle and analyse website is URL to find out whether it is a phishing or not. URL phshing domains have distinctive feature in which one  can tell. Below points can tell if it is phishing or not.
+The first thing to do to tackle and analyse a website is URL to find out whether it is a phishing or not. URL phishing domains have distinctive features in which one 
+can tell. Below points can tell if it is phishing or not.
 
 
 ### 1. URL length 
@@ -23,20 +27,24 @@ The first thing to do to tackle and analyse website is URL to find out whether i
 
 # Random forest: 
 
-Is classification algorithm which uses bagging and feature randomness when building each individual tree to try to create an uncorrelated forest of trees whose prediction by committee is more accurate than that of any individual tree. It is supervised machine learning Supervised Machine Learning Algorithm that is used widely in Classification and Regression problems. It builds decision trees on different samples and takes their majority vote for classification and average in case of regression. A below image will provide bright idea: 
+
+Is an algorithm which uses bagging and feature randomness when building each individual tree to try to create an uncorrelated forest of trees whose prediction by 
+committee is more accurate than that of any individual tree. It is supervised machine learning Algorithm that is used widely in Classification and Regression problems. 
+It builds decision trees on different samples and takes their majority vote for classification and average in case of regression. A below image will provide bright 
+idea:
 
  ![image](https://user-images.githubusercontent.com/54819478/180170219-6f210f10-a69d-4105-8678-b73125aa225f.png)
 
 
 # Phishing detection: 
 
-I found this phishing dataset: https://www.kaggle.com/datasets/shashwatwork/phishing-dataset-for-machine-learning in which I will provide the detection technique using algorithm random forest.
-
-
-This dataset provide label data which has samples as phish domains and ligit domains. The dataset which will be used in the training phase is a very important point 
-to build successful detection mechanism. We have to use samples whose classes are precisely known. So it means, the samples which are labeled as phishing must be 
+I found this phishing dataset: https://www.kaggle.com/datasets/shashwatwork/phishing-dataset-for-machine-learning in which I will provide the detection technique using 
+random forest.
+This dataset provides labeled data which has samples as phish domains and  legit domains. The dataset which will be used in the training phase is a very important 
+point to build successful detection mechanism. We have to use samples whose classes are precisely known. So it means, the samples which are labeled as phishing must be 
 absolutely detected as phishing. Likewise the samples which are labeled as legitimate must be absolutely detected as legitimate. Otherwise, the system will not work 
 correctly if we use samples that we are not sure about. When the journey of the samples is completed, the class that a sample belongs to will become clear.
+
 
 ![image](https://user-images.githubusercontent.com/54819478/179998951-4bd93461-85d8-4e28-adce-65893000a7ce.png)
 
